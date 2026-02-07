@@ -1,3 +1,59 @@
+## Проект "Рецепты татарской кухни" на Next.js
+
+### Ссылка на сайт: <a href="https://tatar-recipes-two.vercel.app">Рецепты</a>
+
+<ul>
+	<li>Проект реализован на Next.js.</li>
+	<li>Интерфейс - HeroUI.</li>
+	<li>Регистрация/авторизация - Auth.js.</li>
+	<li>Управление состоянием - Zustand.</li>
+	<li>Хранение данных - PostgreSQl, а также облачная Prisma Data platform.</li>
+</ul>
+
+#### :hammer_and_wrench: Стек технологий:
+<span>
+	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs.svg" width="36" height="36" alt="Next.js" />
+</span>
+<span>
+	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="ReactJS" />
+</span>
+<span>
+	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" />
+</span>
+<span>
+	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JS" />
+</span>
+<span>
+	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg" width="36" height="36" alt="PostgreSQL" />
+</span>
+
+<p>Next.js, React, TypeScript, JavaScript, PostgreSQL, Prisma, Zustand, HeroUI, Zod, Auth.js</p>
+
+---
+#### На сайте реализовано:
+
+###### Страница с рецептами:
+![](/screen/home.png)
+
+###### Регистрация:
+![](/screen/register.png)
+
+###### Авторизация:
+![](/screen/login.png)
+
+###### Страница с ингредиентами и формой добавления игредиента:
+![](/screen/ingredients.png)
+
+###### Добавление рецептов / редактирование / удаление:
+![](/screen/add-recipe.png)
+
+###### Карточка рецепта:
+![](/screen/recipe.png)
+
+---
+### Запуск проекта:
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
