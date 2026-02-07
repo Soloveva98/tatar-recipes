@@ -75,7 +75,7 @@ export default function Header() {
 	};
 
 	return (
-		<Navbar className="h-[60px]">
+		<Navbar className="navbar-site">
 			<NavbarBrand>
 				<Link href="/" className="flex gap-1 items-center">
 					<Logo />
@@ -83,7 +83,7 @@ export default function Header() {
 				</Link>
 			</NavbarBrand>
 
-			<NavbarContent className="hidden sm:flex gap-4" justify="center">
+			<NavbarContent className="sm:flex gap-4" justify="center">
 				{getNavItems()}
 			</NavbarContent>
 
@@ -94,7 +94,7 @@ export default function Header() {
 					{isAuth && <p>Привет, {session?.user?.email}</p>}
 					{!isAuth ? (
 						<>
-							<NavbarItem className="hidden lg:flex">
+							<NavbarItem>
 								<Button
 									as={Link}
 									color="secondary"
@@ -118,7 +118,7 @@ export default function Header() {
 							</NavbarItem>
 						</>
 					) : (
-						<NavbarItem className="hidden lg:flex">
+						<NavbarItem>
 							<Button
 								as={Link}
 								color="secondary"

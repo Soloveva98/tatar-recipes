@@ -32,6 +32,16 @@ ul {
 	padding-left: 20px;
 }
 
+.navbar-site {
+	padding: 10px 0;
+	--navbar-height: auto !important;
+}
+
+.navbar-site header {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 @keyframes fade-in-up {
 	from {
 		opacity: 0;
@@ -45,4 +55,16 @@ ul {
 
 .animate-fade-in-up {
 	animation: fade-in-up 0.3s ease-out;
+}
+
+@media (max-width: 550px) {
+	.navbar-site header {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.navbar-site header ul {
+		padding-left: 0;
+	}
 }
