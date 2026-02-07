@@ -20,7 +20,7 @@ export type RecipeIngredient = {
 	ingredientId: string;
 	quantity: number;
 	ingredient: Ingredient;
-}
+};
 
 export type Recipe = {
 	id: string;
@@ -28,4 +28,6 @@ export type Recipe = {
 	description: string;
 	imageUrl?: string | null;
 	ingredients: RecipeIngredient[];
-}
+};
+
+export type ToastType = 'success' | 'error' | 'info' | 'warning';

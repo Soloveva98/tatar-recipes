@@ -30,9 +30,9 @@ export async function registerUser(formData: FormData) {
 			},
 		});
 
-		return user;
+		return { success: true, user };
 	} catch (error) {
 		console.error('Ошибка регистрации', error);
-		return { error: 'Ошибка при регистрации' };
+		return { success: false, error: 'Ошибка при регистрации' };
 	}
 }

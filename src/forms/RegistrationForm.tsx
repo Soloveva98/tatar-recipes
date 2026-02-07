@@ -5,6 +5,7 @@ import { Form } from '@heroui/form';
 import { Input } from '@heroui/input';
 import { Button } from '@heroui/react';
 import { registerUser } from '@/actions/register';
+import { useToastStore } from '@/store/toast.store';
 
 interface RegistrationFormProps {
 	onClose: () => void;
@@ -16,6 +17,7 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onClose }) => {
 		password: '',
 		confirmPassword: '',
 	});
+	const { showToast } = useToastStore();
 
 	const validateEmail = (value: string) => {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -24,12 +26,26 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ onClose }) => {
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log('Form submitted:', formData);
 
-		const result = await registerUser(formData);
-		console.log('result', result);
+		try {
+			const result = await registerUser(formData);
 
-		onClose();
+			if (result.success) {
+				showToast(
+					'Регистрация пройдена успешно. Пройдите авторизацию.',
+					'success',
+				);
+				onClose();
+			} else {
+				showToast(
+					result.error || 'Ошибка при регистрации. Попробуйте снова.',
+					'error',
+				);
+			}
+		} catch (error) {
+			showToast('Произошла ошибка. Попробуйте позже.', 'error');
+			onClose();
+		}
 	};
 
 	return (

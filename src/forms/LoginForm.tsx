@@ -5,6 +5,7 @@ import { Form } from '@heroui/form';
 import { Input } from '@heroui/input';
 import { Button } from '@heroui/react';
 import { signInWithCredentials } from '@/actions/sign-in';
+import { useToastStore } from '@/store/toast.store';
 
 interface LoginFormProps {
 	onClose: () => void;
@@ -16,19 +17,33 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
 		password: '',
 		confirmPassword: '',
 	});
+	const { showToast } = useToastStore();
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log('Form submitted:', formData);
 
-		const result = await signInWithCredentials(
-			formData.email,
-			formData.password,
-		);
+		try {
+			const result = await signInWithCredentials(
+				formData.email,
+				formData.password,
+			);
 
-		window.location.reload();
-
-		onClose();
+			if (result.success) {
+				onClose();
+				showToast('Авторизация пройдена успешно.', 'success');
+				setTimeout(() => {
+					window.location.reload();
+				}, 1000);
+			} else {
+				showToast(
+					result.error || 'Ошибка при авторизации. Попробуйте снова.',
+					'error',
+				);
+			}
+		} catch (error) {
+			showToast('Произошла ошибка. Попробуйте позже.', 'error');
+			onClose();
+		}
 	};
 
 	return (

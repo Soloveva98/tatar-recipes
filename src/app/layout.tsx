@@ -8,6 +8,7 @@ import { SessionProvider } from 'next-auth/react';
 import { auth } from '@/auth/auth';
 import AppLoader from '@/hoc/app-loader';
 import Title from '@/components/UI/layout/Title';
+import ToastContainer from '@/components/UI/layout/ToastContainer';
 
 const inter = Jost({
 	subsets: ['cyrillic', 'latin'],
@@ -41,6 +42,7 @@ export default async function RootLayout({
 							<footer className="flex justify-center items-center h-[80px]">
 								<p>{siteConfig.description}</p>
 							</footer>
+							<ToastContainer />
 						</AppLoader>
 					</SessionProvider>
 				</Providers>

@@ -10,9 +10,9 @@ export async function signInWithCredentials(email: string, password: string) {
 			redirect: false,
 		});
 
-		return;
+		return { success: true };
 	} catch (error) {
 		console.error('Ошибка авторизации: ', error);
-		throw error;
+		return { success: false, error: 'Ошибка при авторизации' };
 	}
 }
