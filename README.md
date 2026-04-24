@@ -11,21 +11,11 @@
 </ul>
 
 #### :hammer_and_wrench: Стек технологий:
-<span>
-	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs.svg" width="36" height="36" alt="Next.js" />
-</span>
-<span>
-	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="ReactJS" />
-</span>
-<span>
-	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" />
-</span>
-<span>
-	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JS" />
-</span>
-<span>
-	<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg" width="36" height="36" alt="PostgreSQL" />
-</span>
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,js,postgresql" />
+  </a>
+</p>
 
 <p>Next.js, React, TypeScript, JavaScript, PostgreSQL, Prisma, Zustand, HeroUI, Zod, Auth.js</p>
 
